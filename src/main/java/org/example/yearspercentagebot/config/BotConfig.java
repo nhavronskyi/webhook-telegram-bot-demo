@@ -16,14 +16,19 @@ public class BotConfig {
 
     private final TelegramProps props;
 
+    @Bean
+    public SetWebhook setWebhook() {
+        return SetWebhook.builder()
+                .url(props.webhook())
+                .build();
+    }
+
     @SneakyThrows
     @Bean
-    public Bot myTelegramBot() {
-        System.out.println(props.token());
-
-        Bot bot = new Bot(props.token(), props);
-        TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);
-        telegramBotsApi.registerBot(bot, new SetWebhook(props.webhook()));
+    public Bot myTelegramBot(SetWebhook setWebhook) {
+        Bot bot = new Bot(setWebhook, props);
+        TelegramBotsApi tba = new TelegramBotsApi(DefaultBotSession.class);
+        tba.registerBot(bot, new SetWebhook(props.webhook()));
         return bot;
     }
 }
