@@ -3,6 +3,7 @@ package org.example.yearspercentagebot.controller;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.example.yearspercentagebot.component.Bot;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,5 +25,11 @@ public class Controller {
             bot.execute(new SendMessage(chatId, "You said: " + update.getMessage().getText()));
         }
         return new SendMessage();
+    }
+
+    // method to check if ngrok is alive
+    @GetMapping("test")
+    public String test(){
+        return "hello";
     }
 }

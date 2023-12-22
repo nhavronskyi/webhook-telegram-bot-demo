@@ -28,7 +28,7 @@ public class BotConfig {
     public Bot myTelegramBot(SetWebhook setWebhook) {
         Bot bot = new Bot(setWebhook, props);
         TelegramBotsApi tba = new TelegramBotsApi(DefaultBotSession.class);
-        tba.registerBot(bot, new SetWebhook(props.webhook()));
+        tba.registerBot(bot, setWebhook);
         return bot;
     }
 }
