@@ -1,0 +1,5 @@
+telegram:
+  bot:
+    token: 6104036093:AAEigLFVx4s69sPVqmJ4VhFnFlBO3HW5zRA
+    username: actualDateInPercentageBot
+    webhook: https://653f-2a02-a315-4246-3300-8905-f699-4b7a-6c57.ngrok-free.app
