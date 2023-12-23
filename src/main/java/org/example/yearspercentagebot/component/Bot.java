@@ -27,6 +27,8 @@ public class Bot extends SpringWebhookBot {
         return new SendMessage();
     }
 
+
+    // default path is "callout" but we need the "callout/update" to run our main logic
     @Override
     public String getBotPath() {
         return "update";

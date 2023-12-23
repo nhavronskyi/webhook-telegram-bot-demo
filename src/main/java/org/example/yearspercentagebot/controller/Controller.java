@@ -1,5 +1,6 @@
 package org.example.yearspercentagebot.controller;
 
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.example.yearspercentagebot.component.Bot;
@@ -11,12 +12,11 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("callback")
 public class Controller {
 
     private final Bot bot;
 
-    @PostMapping("update")
+    @PostMapping("callback/update")
     @SneakyThrows
     public BotApiMethod<?> onWebhookUpdateReceived(@RequestBody Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
@@ -32,8 +32,8 @@ public class Controller {
     }
 
     // method to check if ngrok is alive
-    @GetMapping("test")
-    public String test() {
-        return "hello";
+    @GetMapping()
+    public String test(HttpServletRequest request) {
+        return "hello + " + request.getHeader("X-FORWARDED-FOR");
     }
 }
