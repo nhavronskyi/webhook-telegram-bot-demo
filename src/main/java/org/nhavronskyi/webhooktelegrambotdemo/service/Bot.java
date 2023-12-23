@@ -1,8 +1,8 @@
 package org.nhavronskyi.webhooktelegrambotdemo.service;
 
 import lombok.SneakyThrows;
-import org.nhavronskyi.webhooktelegrambotdemo.props.TelegramProps;
 import org.jvnet.hk2.annotations.Service;
+import org.nhavronskyi.webhooktelegrambotdemo.props.TelegramProps;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.methods.updates.SetWebhook;
