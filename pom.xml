@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.example</groupId>
-    <artifactId>yearsPercentageBot</artifactId>
+    <artifactId>webhooktelegrambotdemo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>yearsPercentageBot</name>
     <description>yearsPercentageBot</description>

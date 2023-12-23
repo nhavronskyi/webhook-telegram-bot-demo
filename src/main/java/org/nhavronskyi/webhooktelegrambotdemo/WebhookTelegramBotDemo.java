@@ -1,16 +1,16 @@
-package org.example.yearspercentagebot;
+package org.nhavronskyi.webhooktelegrambotdemo;
 
-import org.example.yearspercentagebot.props.TelegramProps;
+import org.nhavronskyi.webhooktelegrambotdemo.props.TelegramProps;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
 @SpringBootApplication
 @EnableConfigurationProperties(TelegramProps.class)
-public class YearsPercentageBotApplication {
+public class WebhookTelegramBotDemo {
 
     public static void main(String[] args) {
-        SpringApplication.run(YearsPercentageBotApplication.class, args);
+        SpringApplication.run(WebhookTelegramBotDemo.class, args);
     }
 
 }

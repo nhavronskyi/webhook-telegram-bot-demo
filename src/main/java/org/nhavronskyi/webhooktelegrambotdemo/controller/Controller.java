@@ -1,10 +1,13 @@
-package org.example.yearspercentagebot.controller;
+package org.nhavronskyi.webhooktelegrambotdemo.controller;
 
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
-import org.example.yearspercentagebot.service.Bot;
-import org.springframework.web.bind.annotation.*;
+import org.nhavronskyi.webhooktelegrambotdemo.service.Bot;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;

@@ -1,10 +1,10 @@
-package org.example.yearspercentagebot;
+package org.nhavronskyi.webhooktelegrambotdemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class YearsPercentageBotApplicationTests {
+class WebhookTelegramBotDemoTests {
 
     @Test
     void contextLoads() {

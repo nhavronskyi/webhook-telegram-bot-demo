@@ -1,4 +1,4 @@
-package org.example.yearspercentagebot.props;
+package org.nhavronskyi.webhooktelegrambotdemo.props;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
