@@ -2,7 +2,7 @@ package org.example.yearspercentagebot.config;
 
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
-import org.example.yearspercentagebot.component.Bot;
+import org.example.yearspercentagebot.service.Bot;
 import org.example.yearspercentagebot.props.TelegramProps;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -3,7 +3,7 @@ package org.example.yearspercentagebot.controller;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
-import org.example.yearspercentagebot.component.Bot;
+import org.example.yearspercentagebot.service.Bot;
 import org.springframework.web.bind.annotation.*;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.ParseMode;

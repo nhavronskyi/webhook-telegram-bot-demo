@@ -1,4 +1,4 @@
-package org.example.yearspercentagebot.component;
+package org.example.yearspercentagebot.service;
 
 import lombok.SneakyThrows;
 import org.example.yearspercentagebot.props.TelegramProps;
