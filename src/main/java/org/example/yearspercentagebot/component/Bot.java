@@ -29,7 +29,7 @@ public class Bot extends SpringWebhookBot {
 
     @Override
     public String getBotPath() {
-        return props.webhook();
+        return "update";
     }
 
     @Override
