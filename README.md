@@ -22,7 +22,10 @@
 
   <img width="890" alt="Screenshot 2023-12-23 at 19 34 06" src="https://github.com/nhavronskyi/webhook-telegram-bot-demo/assets/96009885/c2c18d0c-cd79-4d4c-8497-9ab9a6875497">
 
-  <p>You need to set this link to the telegram bot as a webhook</p>
+
+  <p>Now you can put your webhook link to your application properties, and run your application.</p>
+
+  <p>You also can set this link to the telegram bot as a webhook by HTTP Request</p>
 
   ```HTTP
   GET https://api.telegram.org/bot<your_token>/setWebhook?url=<copied_link>
@@ -43,8 +46,6 @@ You can check if the link chains with your bot:
   ```HTTP
   GET https://api.telegram.org/bot<your_token>/getWebhookInfo
   ```
-
-Now you can put your webhook link to your application properties, and run your application.
 </div>
 
 
