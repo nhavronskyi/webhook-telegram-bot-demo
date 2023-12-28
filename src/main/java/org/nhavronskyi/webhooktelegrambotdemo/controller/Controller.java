@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
-import org.telegram.telegrambots.meta.api.methods.ParseMode;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
@@ -25,7 +24,6 @@ public class Controller {
         if (update.hasMessage() && update.getMessage().hasText()) {
             var chatId = update.getMessage().getChatId().toString();
             var message = SendMessage.builder()
-                    .parseMode(ParseMode.HTML)
                     .chatId(chatId)
                     .text("You said: " + update.getMessage().getText())
                     .build();

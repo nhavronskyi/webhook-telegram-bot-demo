@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.updates.SetWebhook;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
+import org.telegram.telegrambots.updatesreceivers.ServerlessWebhook;
 
 @Configuration
 @RequiredArgsConstructor
@@ -27,7 +28,7 @@ public class BotConfig {
     @Bean
     public Bot myTelegramBot(SetWebhook setWebhook) {
         Bot bot = new Bot(setWebhook, props);
-        TelegramBotsApi tba = new TelegramBotsApi(DefaultBotSession.class);
+        TelegramBotsApi tba = new TelegramBotsApi(DefaultBotSession.class, new ServerlessWebhook());
         tba.registerBot(bot, setWebhook);
         return bot;
     }
